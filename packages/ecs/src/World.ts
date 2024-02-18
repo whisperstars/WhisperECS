@@ -14,8 +14,15 @@ export class World {
 
   // eslint-disable-next-line
   components: Record<string, new (props: any) => ComponentBase> = {};
+  // eslint-disable-next-line
+  private events: any;
 
   constructor() {}
+
+  // eslint-disable-next-line
+  setEvents(events: any) {
+    this.events = events;
+  }
 
   assertUniqueName(name: string) {
     return this.entities.find((entity) => entity.name === name);
