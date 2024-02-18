@@ -1,7 +1,7 @@
 {
   "name": "@whisperstars/WhisperECS",
   "version": "0.1.0",
-  "description": "An ECS implementation",
+  "description": "An efficient and lightweight Entity Component System (ECS)",
   "scripts": {
     "clean": "rimraf ./dist && rimraf ./coverage",
     "test:types": "tsc",
