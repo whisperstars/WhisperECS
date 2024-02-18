@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 import { externalizeDeps } from 'vite-plugin-externalize-deps';
+import { terser } from 'rollup-plugin-terser';
+import { Plugin } from 'vite';
 
 export default defineConfig({
   plugins: [
@@ -27,6 +29,11 @@ export default defineConfig({
         declarationMap: false,
       },
     }),
+    terser({
+      format: {
+        comments: false,
+      },
+    }) as Plugin,
   ],
   build: {
     lib: {
@@ -43,6 +50,6 @@ export default defineConfig({
         preserveModules: true,
       },
     },
-    sourcemap: true, // Optional: Enable if you want source maps
+    sourcemap: true,
   },
 });
