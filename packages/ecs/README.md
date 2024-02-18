@@ -6,7 +6,7 @@ It now includes a robust serialization/deserialization mechanism, making it suit
 ## Installation
 
 ```bash
-npm install @whisperstars/whisperECS
+npm install @whisperstars/ecs
 ```
 
 ## Upcoming Features and Improvements
